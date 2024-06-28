@@ -519,7 +519,7 @@ static struct artist *artist_new(const char *name, const char *sort_name, int is
 	a->collkey_name = u_strcasecoll_key(a->name);
 	a->collkey_sort_name = u_strcasecoll_key0(a->sort_name);
 	a->collkey_auto_sort_name = u_strcasecoll_key0(a->auto_sort_name);
-	a->expanded = 0;
+	a->expanded = 1;
 	a->is_compilation = is_compilation;
 	rb_root_init(&a->album_root);
 

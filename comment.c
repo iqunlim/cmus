@@ -60,7 +60,7 @@ int track_is_compilation(const struct keyval *comments)
 
 int track_is_va_compilation(const struct keyval *comments)
 {
-	const char *c, *a, *aa;
+	/*const char *c, *a, *aa;
 
 	aa = keyvals_get_val(comments, "albumartist");
 	if (aa)
@@ -76,26 +76,27 @@ int track_is_va_compilation(const struct keyval *comments)
 
 	c = keyvals_get_val(comments, "partofacompilation");
 	if (c && is_freeform_true(c))
-		return 1;
+		return 1;*/
 
 	return 0;
 }
 
 const char *comments_get_albumartist(const struct keyval *comments)
 {
-	const char *val = keyvals_get_val(comments, "albumartist");
+	/*const char *val = keyvals_get_val(comments, "albumartist");
 
 	if (!val || strcmp(val, "") == 0)
 		val = keyvals_get_val(comments, "artist");
 
-	return val;
+	return val;*/
+	return "<Various Albums>";
 }
 
 const char *comments_get_artistsort(const struct keyval *comments)
 {
-	const char *val;
+	//const char *val;
 
-	if (track_is_va_compilation(comments))
+	/*if (track_is_va_compilation(comments))
 		return NULL;
 
 	val = keyvals_get_val(comments, "albumartistsort");
@@ -105,9 +106,9 @@ const char *comments_get_artistsort(const struct keyval *comments)
 	}
 
 	if (!val || strcmp(val, "") == 0)
-		return NULL;
+		return NULL;*/
 
-	return val;
+	return NULL;
 }
 
 int comments_get_int(const struct keyval *comments, const char *key)
